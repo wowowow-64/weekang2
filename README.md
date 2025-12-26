@@ -6,7 +6,10 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 Start by installing [Node.js](https://nodejs.org/en/download)
 
-Then install the Angular CLI: npm install -g @angular/cli@latest
+Then install the Angular CLI: 
+```bash
+npm install -g @angular/cli@latest
+```
 
 ## Development server
 
