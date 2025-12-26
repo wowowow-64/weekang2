@@ -1,5 +1,10 @@
-<div class="days-container">
-  @for (day of days; track day) {
-    <app-day [day]="day" />
+<div class="week-navigation">
+  <button (click)="previousWeek()">Previous</button>
+  <span>{{ weekRange() }}</span>
+  <button (click)="nextWeek()">Next</button>
+</div>
+<div class="planner-container">
+  @for(day of weekDays(); track day.toISOString().split('T')[0]) {
+    <app-day [day]="day.toISOString().split('T')[0]"></app-day>
   }
 </div>

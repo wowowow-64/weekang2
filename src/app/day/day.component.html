@@ -1,17 +1,31 @@
-<div class="day-card">
-  <div class="day-header">
-    <h3>{{ day() }}</h3>
-    <span>Dec 25</span>
-  </div>
+<div class="day-container">
+  <h3>{{ dayName() }}</h3>
+  <p>{{ formattedDate() }}</p>
   <div class="events">
-    @for (event of events(); track event) {
-      <div class="event">
-        <span>{{ event }}</span>
+    @for(event of events(); track $index) {
+      <div class="event-item">
+        @if (editingIndex() === $index) {
+          <div class="edit-event">
+            <input type="text" [(ngModel)]="editedEventText" />
+            <div class="edit-actions">
+              <button (click)="saveEvent($index)">Save</button>
+              <button (click)="deleteEvent($index)">Delete</button>
+              <button (click)="cancelEdit()">Cancel</button>
+            </div>
+          </div>
+        } @else {
+          <span>{{ event }}</span>
+          <div class="actions">
+            <button (click)="editEvent($index)">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/edit--v1.png" alt="edit" width="20" height="20"/>
+            </button>
+          </div>
+        }
       </div>
     }
   </div>
   <div class="add-event">
-    <input type="text" placeholder="New event" [ngModel]="newEvent()" (ngModelChange)="newEvent.set($event)" />
+    <input type="text" [(ngModel)]="newEvent" placeholder="Add a new event" />
     <button (click)="addEvent()">Add</button>
   </div>
 </div>
