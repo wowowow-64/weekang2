@@ -19,7 +19,9 @@
   font-size: 1.2rem;
 }
 
-.day-content {
+.events {
+  flex-grow: 1;
+  overflow-y: auto;
   margin-top: 1rem;
 }
 
@@ -29,4 +31,28 @@
   padding: 0.5rem;
   border-radius: 8px;
   margin-bottom: 0.5rem;
+}
+
+.add-event {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.add-event input {
+  flex-grow: 1;
+  border: 1px solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: 0.5rem;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+
+.add-event button {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
