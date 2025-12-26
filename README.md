@@ -2,6 +2,11 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
+## Install Dependancies
+
+Start by installing [Node.js](https://nodejs.org/en/download)
+Then install the Angular CLI: npm install -g @angular/cli@latesr
+
 ## Development server
 
 To start a local development server, run:
