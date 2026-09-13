@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
+## Depricated
+look at my new project
+
 ## Install Dependancies
 
 Start by installing [Node.js](https://nodejs.org/en/download)
